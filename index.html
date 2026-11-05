@@ -223,6 +223,43 @@ p{margin:0 0 14px}
 @keyframes toast{0%{opacity:0;transform:translate(-50%,-20px)}12%{opacity:1;transform:translate(-50%,0)}85%{opacity:1}100%{opacity:0;transform:translate(-50%,-10px)}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}.confetti{display:none}}
 @media(max-width:370px){.body{padding:20px 16px}.answer{font-size:14px;padding:13px 12px}.gift-strip div{font-size:11px}}
+/* ===== 큰 글씨 보정 (게임 도로·차 제외) ===== */
+.brand strong{font-size:19px}.brand small{font-size:11px}
+.hud{font-size:13px}
+.eyebrow{font-size:13px}
+.hero p{font-size:16.5px;line-height:1.7}
+.how div{font-size:14px;line-height:1.5;padding:12px 6px}.how b{font-size:24px}
+.quests h3{font-size:18px}.quests h3 small{font-size:13px}
+.quest b{font-size:16.5px}.quest span{font-size:14.5px;line-height:1.5}.quest em{font-size:13px}
+.quest .qi{width:44px;height:44px;font-size:23px}
+.primary{font-size:18px;min-height:58px}
+.secondary{font-size:16px;min-height:52px}
+.helper{font-size:14.5px;line-height:1.6}
+.teaser-top .k{font-size:13.5px}.teaser-top h3{font-size:20px}.teaser-top p{font-size:15.5px;line-height:1.7}
+.teaser-meta span{font-size:14.5px;padding:4px 10px}
+.teaser summary{font-size:15.5px;padding:14px 16px}
+.teaser .mini li{font-size:15.5px}.teaser .mini time,.teaser .mini span{font-size:13.5px}
+.teaser .gift-line{font-size:14.5px;line-height:1.65}
+.lv{font-size:12.5px}.speedo{font-size:13.5px}
+.q-hint{font-size:15.5px}
+.timer-label{font-size:13.5px}
+.reveal strong{font-size:19px}.reveal p{font-size:16.5px;line-height:1.7}.fact{font-size:14.5px;padding:5px 12px}
+.countdown p{font-size:17px}
+.score-hero h1{font-size:28px}.score-pts{font-size:19px}.rank{font-size:16px}.badge-time{font-size:14px}
+.box h3{font-size:20px}.box p{font-size:16px;line-height:1.7}.box .label{font-size:13.5px}
+.allclear{font-size:19px}.allclear small{font-size:15px}
+.section-title{font-size:14.5px}
+.recap li{font-size:16.5px;padding:11px 0}.recap .mk{width:26px;height:26px;font-size:14px}
+.seminar h2{font-size:26px}.seminar .when{font-size:16px}
+.agenda time{font-size:14px}.agenda strong{font-size:16.5px}.agenda span{font-size:14.5px}
+.travel b{font-size:16px}.travel p{font-size:15.5px;line-height:1.7}
+.cal a{font-size:16.5px;min-height:76px}.cal a small{font-size:13.5px}
+.cal-note{font-size:14px}
+.toast{font-size:16.5px}.toast small{font-size:13px}
+.foot{font-size:13.5px}
+@media(max-width:370px){.hero p{font-size:15.5px}.how div{font-size:13px}.quest span{font-size:14px}}
+.brand small{white-space:nowrap}.brand{min-width:0}
+@media(max-width:400px){.brand small{display:none}.brand img{width:40px}.hud{font-size:12.5px;padding:5px 9px}}
 </style>
 </head>
 <body>
@@ -448,7 +485,7 @@ function stopLoop(){ cancelAnimationFrame(raf); raf = 0; clearTimeout(lapTimer);
 
 function renderStart(){
   stopLoop();
-  hud.textContent = 'BRAND RACING QUIZ';
+  hud.textContent = 'RACING QUIZ';
   app.innerHTML = `
   <div class="screen">
     <section class="hero">
