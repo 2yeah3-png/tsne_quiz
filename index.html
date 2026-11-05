@@ -260,6 +260,8 @@ p{margin:0 0 14px}
 @media(max-width:370px){.hero p{font-size:15.5px}.how div{font-size:13px}.quest span{font-size:14px}}
 .brand small{white-space:nowrap}.brand{min-width:0}
 @media(max-width:400px){.brand small{display:none}.brand img{width:40px}.hud{font-size:12.5px;padding:5px 9px}}
+.sem-sub{display:block;font-size:17px;color:var(--gold);margin-top:6px;letter-spacing:-.3px}
+.t-sub{display:block;font-size:15.5px;color:var(--blue);margin-top:3px}
 </style>
 </head>
 <body>
@@ -285,7 +287,7 @@ const CONFIG = {
   seminarPlace: '여수국제컨벤션센터 · 6강연장(세미나6)',
   seminarEndsAt: '2026-11-19T10:10:00+09:00',
   portalUrl: 'https://www.etsne.com/dataCenter',
-  calTitle: '[태성에스엔이] AI로 연결되는 CAE의 미래 세미나',
+  calTitle: '[태성에스엔이 세미나] AI와 연결되는 CAE의 미래 : Agent부터 Physical AI까지',
   calStartUTC: '20261118T233000Z',   // 11/19 08:30 KST
   calEndUTC: '20261119T011000Z'      // 11/19 10:10 KST
 };
@@ -345,7 +347,7 @@ const ALL_QUIZ = [
     hint:'CAE의 다음 단계를 떠올려 보세요.',
     options:['AI Agent · Physical AI · AI 예측 모델','메타버스 · NFT · 가상 부동산','블록체인 · 코인 · 채굴'],
     correct:0,
-    fact:'AI로 연결되는 CAE의 미래',
+    fact:'AI와 연결되는 CAE의 미래 : Agent부터 Physical AI까지',
     yes:'정답! 말로 하는 CAE(AI Agent), Sim-to-Real(Physical AI), 해석 가속화(AI 예측 모델)까지. 마지막 보너스 스테이지에서 세미나 시간도 맞혀보세요!',
     no:'정답은 "AI Agent · Physical AI · AI 예측 모델"이에요. 마지막 보너스 스테이지에서 세미나 시간도 맞혀보세요!'
   }
@@ -418,7 +420,7 @@ function seminarSection(){
   return `
   <section class="seminar" aria-labelledby="sem-title">
     <p class="eyebrow">TAESUNG S&amp;E AI SEMINAR</p>
-    <h2 id="sem-title">AI로 연결되는<br>CAE의 미래</h2>
+    <h2 id="sem-title">AI와 연결되는<br>CAE의 미래<span class="sem-sub">Agent부터 Physical AI까지</span></h2>
     <p class="when">📅 ${CONFIG.seminarDate} ${CONFIG.seminarTime}</p>
     <p class="when">📍 ${CONFIG.seminarPlace}</p>
     <ol class="agenda">
@@ -510,7 +512,7 @@ function renderStart(){
       <section class="teaser" aria-labelledby="teaser-title">
         <div class="teaser-top">
           <p class="k">퀴즈 다음엔, 세미나에서 만나요</p>
-          <h3 id="teaser-title">AI로 연결되는 CAE의 미래</h3>
+          <h3 id="teaser-title">AI와 연결되는 CAE의 미래<span class="t-sub">Agent부터 Physical AI까지</span></h3>
           <p>AI Agent부터 Physical AI, AI 예측 모델까지. 태성에스엔이가 준비한 CAE × AI 이야기를 학회 둘째 날 아침에 들려드립니다.</p>
           <div class="teaser-meta"><span>📅 11/19(목) 08:30–10:10</span><span>📍 6강연장(세미나6)</span></div>
         </div>
